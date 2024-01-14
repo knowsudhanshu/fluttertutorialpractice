@@ -12,7 +12,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
 
-    mapData = ModalRoute.of(context)!.settings.arguments as Map;
+    mapData = mapData.isNotEmpty ? mapData : ModalRoute.of(context)!.settings.arguments as Map;
     var bgImage = mapData['isDaytime'] ? 'day.png' : 'night.png';
 
     return Scaffold(
@@ -29,8 +29,16 @@ class _HomeState extends State<Home> {
               child: Column(
                   children: <Widget>[
                     TextButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/location');
+                        onPressed: () async {
+                          dynamic result = await Navigator.pushNamed(context, '/location');
+                          setState(() {
+                            mapData = {
+                              'location': result['location'],
+                              'time': result['time'],
+                              'flag': result['flag'],
+                              'isDaytime': result['isDaytime']
+                            };
+                          });
                         },
                         child: const Text('Edit Location')
                     ),

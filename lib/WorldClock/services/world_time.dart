@@ -15,7 +15,9 @@ class WorldTime {
   Future<void> getTime() async {
     try {
       // https://worldtimeapi.org/api/timezone/Asia/Kolkata
-      var uri = Uri.https('worldtimeapi.org', url);
+      var apiPath = '/api/timezone/$url';
+      print(apiPath);
+      var uri = Uri.https('worldtimeapi.org', apiPath);
       print(uri);
       var response = await get(uri);
       var decodedData = jsonDecode(response.body);
