@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ninja_id/WorldClock/services/world_time.dart';
+
 class Loading extends StatefulWidget {
   const Loading({Key? key}) : super(key: key);
 
@@ -7,21 +9,28 @@ class Loading extends StatefulWidget {
 }
 
 class _LoadingState extends State<Loading> {
+  String loading = 'Loading';
 
-  void getData() async {
-    await Future.delayed(Duration(seconds: 3), () {
-
+  void setupWorldTime() async {
+    var apiPath = '/api/timezone/';
+    var instance = WorldTime(location: 'Berlin', flag: 'germany.png', url: '${apiPath}Europe/Berlin');
+    await instance.getTime();
+    setState(() {
+      loading = instance.time.toString();
     });
   }
   @override
   void initState() {
     super.initState();
-    getData();
+    setupWorldTime();
   }
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Text('Loading Screen')
+    return Scaffold(
+      body: Padding(
+          padding: EdgeInsets.all(50),
+          child: Text(loading),
+      )
     );
   }
 }
