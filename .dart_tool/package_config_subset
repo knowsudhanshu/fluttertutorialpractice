@@ -30,6 +30,10 @@ flutter_lints
 2.19
 file:///Users/sudhanshusrivastava/.pub-cache/hosted/pub.dev/flutter_lints-2.0.3/
 file:///Users/sudhanshusrivastava/.pub-cache/hosted/pub.dev/flutter_lints-2.0.3/lib/
+flutter_spinkit
+2.12
+file:///Users/sudhanshusrivastava/.pub-cache/hosted/pub.dev/flutter_spinkit-5.2.0/
+file:///Users/sudhanshusrivastava/.pub-cache/hosted/pub.dev/flutter_spinkit-5.2.0/lib/
 http
 3.2
 file:///Users/sudhanshusrivastava/.pub-cache/hosted/pub.dev/http-1.1.2/
@@ -38,6 +42,10 @@ http_parser
 2.12
 file:///Users/sudhanshusrivastava/.pub-cache/hosted/pub.dev/http_parser-4.0.2/
 file:///Users/sudhanshusrivastava/.pub-cache/hosted/pub.dev/http_parser-4.0.2/lib/
+intl
+3.0
+file:///Users/sudhanshusrivastava/.pub-cache/hosted/pub.dev/intl-0.19.0/
+file:///Users/sudhanshusrivastava/.pub-cache/hosted/pub.dev/intl-0.19.0/lib/
 lints
 2.17
 file:///Users/sudhanshusrivastava/.pub-cache/hosted/pub.dev/lints-2.0.1/

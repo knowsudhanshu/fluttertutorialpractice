@@ -56,6 +56,12 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "flutter_spinkit",
+      "rootUri": "file:///Users/sudhanshusrivastava/.pub-cache/hosted/pub.dev/flutter_spinkit-5.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///Users/sudhanshusrivastava/Development/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -72,6 +78,12 @@
       "rootUri": "file:///Users/sudhanshusrivastava/.pub-cache/hosted/pub.dev/http_parser-4.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///Users/sudhanshusrivastava/.pub-cache/hosted/pub.dev/intl-0.19.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "lints",
@@ -170,7 +182,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-01-14T07:36:05.093847Z",
+  "generated": "2024-01-14T10:37:58.483826Z",
   "generator": "pub",
   "generatorVersion": "3.2.4"
 }
