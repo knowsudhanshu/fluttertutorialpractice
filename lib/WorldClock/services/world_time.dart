@@ -12,19 +12,24 @@ class WorldTime {
   WorldTime({ required this.location, required this.flag, required this.url });
 
   Future<void> getTime() async {
-    // https://worldtimeapi.org/api/timezone/Asia/Kolkata
-    var uri = Uri.https('worldtimeapi.org', url);
-    print(uri);
-    var response = await get(uri);
-    var decodedData = jsonDecode(response.body);
+    try {
+      // https://worldtimeapi.org/api/timezone/Asia/Kolkata
+      var uri = Uri.https('worldtimeapi.org', url);
+      print(uri);
+      var response = await get(uri);
+      var decodedData = jsonDecode(response.body);
 
-    var datetime = decodedData['datetime'];
-    var offset = decodedData['utc_offset'].substring(1,3);
+      var datetime = decodedData['datetime'];
+      var offset = decodedData['utc_offset'].substring(1, 3);
 
-    var now = DateTime.parse(datetime);
-    now = now.add(Duration(hours: int.parse(offset)));
+      var now = DateTime.parse(datetime);
+      now = now.add(Duration(hours: int.parse(offset)));
 
-    time = now.toString();
+      time = now.toString();
+    } catch(e) {
+      print('Error $e');
+      time = 'Couldn\'t get data';
+    }
   }
 
 }
